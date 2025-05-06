@@ -17,7 +17,7 @@ set_config(transform_output='pandas')
 import dagshub
 import mlflow.client
 
-dagshub.init(repo_owner='tajveertyagi', 
+dagshub.init(repo_owner='tajveertyagi',
              repo_name='swiggy-delivery-time-prediction', 
              mlflow=True)
 
@@ -84,7 +84,7 @@ client = MlflowClient()
 model_name = load_model_information("run_information.json")['model_name']
 
 # stage of the model
-stage = "Staging"
+stage = "Production"
 
 # get the latest model version
 # latest_model_ver = client.get_latest_versions(name=model_name,stages=[stage])
